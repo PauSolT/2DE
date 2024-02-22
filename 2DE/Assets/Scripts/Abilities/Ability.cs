@@ -6,10 +6,11 @@ public class Ability : MonoBehaviour
 {
     protected string abilityName = "";
     protected ElementCode code = ElementCode.NumOfElementCodes;
+    protected Player player;
 
     public virtual void Init()
     {
-
+        player = GameObject.Find("Player").GetComponent<Player>();
     }
 
     public void Log()
@@ -18,4 +19,9 @@ public class Ability : MonoBehaviour
             "Element: " + code.ToString());
     }
 
+
+    public virtual void UseAbility(Collider2D collider)
+    {
+
+    }
 }

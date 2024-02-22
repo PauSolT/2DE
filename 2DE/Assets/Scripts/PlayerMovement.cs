@@ -12,11 +12,11 @@ public class PlayerMovement : MonoBehaviour
 
     private CapsuleCollider2D coll;
 
-    private float jumpForce = 14f;
+    private float jumpForce = 20f;
     private float moveSpeed = 7f;
     private float direction;
 
-    private readonly float coyoteTime = 0.2f;
+    private readonly float coyoteTime = 0.1f;
     private float currentCoyoteTime = 0f;
 
     private readonly float jumpBuffering = 0.25f;
@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void TryToJump()
     {
-        if (currentJumpBuffer > 0f && currentCoyoteTime > 0f && IsGrounded())
+        if (currentJumpBuffer > 0f && IsGrounded() || currentCoyoteTime > 0f && !IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             currentCoyoteTime = 0f;
