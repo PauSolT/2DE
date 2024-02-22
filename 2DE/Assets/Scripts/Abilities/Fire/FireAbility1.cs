@@ -4,24 +4,27 @@ using UnityEngine;
 
 public class FireAbility1 : Ability
 {
-    float damage = 10f;
+    readonly float damage = 10f;
     [SerializeField]
     GameObject prefab;
 
     public override void UseAbility(Collider2D collider)
     {
-        Instantiate(prefab, player.transform);
+        Object ability = GameObject.Instantiate(prefab, player.transform);
+        GameObject.Destroy(ability, 0.5f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
         {
-            //Do damage
+            HealthComponent enemyHealth = collision.GetComponent<HealthComponent>();
+            enemyHealth.TakeDamage(damage);
         } 
         else if (collision.CompareTag("Player"))
         {
-            //Heal
+            HealthComponent playerHealth = collision.GetComponent<HealthComponent>();
+            playerHealth.TakeHealing(damage/2);
         }
     }
 }

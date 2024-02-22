@@ -8,9 +8,15 @@ public class Element
     protected ElementCode code = ElementCode.NumOfElementCodes;
     protected ElementStatus status = ElementStatus.NumOfElementStatus;
 
+    [SerializeField]
     protected List<Ability> abilities = new();
 
     public virtual void Init()
+    {
+
+    }
+
+    protected virtual void PopulateAbilities()
     {
 
     }

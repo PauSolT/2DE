@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ability : MonoBehaviour
+public class Ability
 {
     protected string abilityName = "";
     protected ElementCode code = ElementCode.NumOfElementCodes;

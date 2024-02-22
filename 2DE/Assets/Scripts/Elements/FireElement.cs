@@ -12,5 +12,11 @@ public class FireElement : Element
         status = ElementStatus.Ready;
     }
 
+    protected override void PopulateAbilities()
+    {
+        base.PopulateAbilities();
+
+        abilities.Add(new FireAbility1());
+    }
 
 }
