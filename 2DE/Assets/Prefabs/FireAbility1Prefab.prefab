@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6332792593435725018}
   - component: {fileID: 4119744079483819104}
   - component: {fileID: 8380366760444582309}
+  - component: {fileID: 8851328277867729827}
   m_Layer: 3
   m_Name: FireAbility1Prefab
   m_TagString: Untagged
@@ -111,3 +112,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8851328277867729827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7750335779743064638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec1714181d48c844698b06ce1978ab4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ability
+public class Ability : MonoBehaviour
 {
     protected string abilityName = "";
     protected ElementCode code = ElementCode.NumOfElementCodes;
@@ -20,7 +20,7 @@ public class Ability
     }
 
 
-    public virtual void UseAbility(Collider2D collider)
+    public virtual void UseAbility()
     {
 
     }

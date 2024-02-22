@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    List<Element> elements = new();
-
+    [SerializeField]
+    Element[] elements;
+    public Element[] Elements { get => elements; }
 
     void Start()
     {
-        elements.Add(new FireElement());
+        elements = GetComponentsInChildren<Element>();
 
         foreach (Element element in elements)
         {
             element.Init();
             element.Log();
+            foreach (Ability ability in element.Abilities)
+            {
+                ability.Init();
+            }
         }
 
     }

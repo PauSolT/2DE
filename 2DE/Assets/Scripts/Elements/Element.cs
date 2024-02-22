@@ -2,18 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Element
+public class Element : MonoBehaviour
 {
     protected string elementName = "";
     protected ElementCode code = ElementCode.NumOfElementCodes;
     protected ElementStatus status = ElementStatus.NumOfElementStatus;
 
     [SerializeField]
-    protected List<Ability> abilities = new();
+    protected Ability[] abilities;
+    public Ability[] Abilities { get => abilities; }
+
 
     public virtual void Init()
     {
-
+        PopulateAbilities();
     }
 
     protected virtual void PopulateAbilities()

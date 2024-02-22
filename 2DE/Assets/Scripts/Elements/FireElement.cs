@@ -15,8 +15,8 @@ public class FireElement : Element
     protected override void PopulateAbilities()
     {
         base.PopulateAbilities();
+        abilities = GetComponentsInChildren<Ability>();
 
-        abilities.Add(new FireAbility1());
     }
 
 }
