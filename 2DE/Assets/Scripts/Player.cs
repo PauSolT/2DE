@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
+    List<Element> elements = new();
+
+
     void Start()
     {
-        
-    }
+        elements.Add(new FireElement());
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        foreach (Element element in elements)
+        {
+            element.Init();
+            element.Log();
+        }
+
     }
+   
 }

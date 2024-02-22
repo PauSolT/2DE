@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class Element
 {
-    string elementName = "";
-    ElementCode code = ElementCode.NumOfElementCodes;
+    protected string elementName = "";
+    protected ElementCode code = ElementCode.NumOfElementCodes;
+    protected ElementStatus status = ElementStatus.NumOfElementStatus;
 
-    List<Ability> abilities = new();
-
-    public Element(string eleName, ElementCode eleCode)
-    {
-        elementName = eleName;
-        code = eleCode;
-    }
+    protected List<Ability> abilities = new();
 
     public virtual void Init()
     {
+
+    }
+
+    public void Log()
+    {
+        Debug.Log("Ability: " + elementName + "\n" +
+            "Element: " + code.ToString() + "\n" +
+            "Status: " + status.ToString());
 
     }
 }
