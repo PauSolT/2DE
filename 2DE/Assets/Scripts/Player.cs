@@ -15,7 +15,6 @@ public class Player : MonoBehaviour
         foreach (Element element in elements)
         {
             element.Init();
-            element.Log();
             foreach (Ability ability in element.Abilities)
             {
                 ability.Init();

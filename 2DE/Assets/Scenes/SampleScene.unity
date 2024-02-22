@@ -683,9 +683,10 @@ GameObject:
   - component: {fileID: 867412797}
   - component: {fileID: 867412796}
   - component: {fileID: 867412795}
-  m_Layer: 6
+  - component: {fileID: 867412799}
+  m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -794,6 +795,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &867412799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867412794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40002f5502a91544c866d6810d046e2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1632511461
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,9 +823,10 @@ GameObject:
   - component: {fileID: 1632511467}
   - component: {fileID: 1632511466}
   - component: {fileID: 1632511469}
+  - component: {fileID: 1632511470}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -935,6 +949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c96609a0c4b5cb459863760f9610073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  elements: []
 --- !u!114 &1632511467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -999,5 +1014,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39cb51604783e54408b82e820b24b5ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1632511470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632511461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40002f5502a91544c866d6810d046e2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

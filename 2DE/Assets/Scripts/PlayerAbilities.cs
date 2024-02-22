@@ -30,7 +30,6 @@ public class PlayerAbilities : MonoBehaviour
     private void UseAbility1(InputAction.CallbackContext context)
     {
         player.Elements[0].Abilities[0].UseAbility();
-        player.Elements[0].Abilities[0].Log();
     }
 
 
