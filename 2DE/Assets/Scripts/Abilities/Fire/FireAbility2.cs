@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireAbility1 : Ability
+public class FireAbility2 : Ability
 {
     [SerializeField]
     GameObject prefab;
@@ -11,10 +11,10 @@ public class FireAbility1 : Ability
     public override void Init()
     {
         base.Init();
-        abilityName = "Fire fist";
+        abilityName = "Fire pool";
         code = ElementCode.Fire;
-        offset = Vector3.right * 4.5f;
-        baseCooldown = 7f;
+        offset = (4f * player.transform.right) + Vector3.down ;
+        baseCooldown = 20f;
     }
 
 
@@ -23,14 +23,12 @@ public class FireAbility1 : Ability
         int result = base.UseAbility();
         if (result == 0)
         {
-            Object ability = GameObject.Instantiate(prefab, 
-                player.transform.position + offset,
-                Quaternion.identity,
-                player.transform);
-            GameObject.Destroy(ability, 0.5f);
+            Object ability = GameObject.Instantiate(prefab,
+            player.transform.position + offset,
+            Quaternion.identity);
+            GameObject.Destroy(ability, 4.5f);
             StartCoroutine(nameof(StartCooldown));
         }
         return result;
     }
-
 }

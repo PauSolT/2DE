@@ -4,38 +4,43 @@ using UnityEngine;
 
 public class HealthComponent : MonoBehaviour
 {
+    [SerializeField]
     float maxHealth = 10f;
+    [SerializeField]
     float currentHealth = 10f;
 
-    public void TakeDamage(float damage)
+    bool fireInvulnerability = false;
+    public bool FireInvulnerability { get => fireInvulnerability; set => fireInvulnerability = value; }
+
+    public float TakeDamage(float damage)
     {
-        Debug.Log("Damage for " + damage);
-        currentHealth -= damage;
-        if (CheckIfNoHealth())
+        if (fireInvulnerability)
         {
-            Die();
+            return TakeHealing(damage * 0.25f);
+        } else
+        {
+            float healthBeforeDamage = currentHealth;
+            float healthAfterDamage;
+            currentHealth -= damage;
+            healthAfterDamage = currentHealth;
+            if (currentHealth <= 0f)
+            {
+                Die();
+            }
+            return healthBeforeDamage - healthAfterDamage;
         }
     }
 
-    public void TakeHealing(float healing)
+    public float TakeHealing(float healing)
     {
-        Debug.Log("Healing for " + healing);
+        float healthBeforeHealing = currentHealth;
         currentHealth += healing;
         if (currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    bool CheckIfNoHealth()
-    {
-        return currentHealth <= 0;
+        float healthAfterHealing = currentHealth;
+        return healthAfterHealing - healthBeforeHealing;
     }
 
     void Die()

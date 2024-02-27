@@ -8,8 +8,16 @@ public class Player : MonoBehaviour
     Element[] elements;
     public Element[] Elements { get => elements; }
 
+    HealthComponent playerHealth;
+    public HealthComponent PlayerHealth { get => playerHealth; }
+
+    SpriteRenderer playerSprite;
+    public SpriteRenderer PlayerSprite { get => playerSprite; }
+
     void Start()
     {
+        playerHealth = GetComponent<HealthComponent>();
+        playerSprite = GetComponent<SpriteRenderer>();
         elements = GetComponentsInChildren<Element>();
 
         foreach (Element element in elements)
