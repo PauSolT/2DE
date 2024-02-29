@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 14602814}
   - component: {fileID: 14602815}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FireElement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -485,7 +485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 340428916}
   - component: {fileID: 340428917}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FireAbility1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -530,7 +530,7 @@ GameObject:
   m_Component:
   - component: {fileID: 473230151}
   - component: {fileID: 473230152}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FireAbility2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -862,7 +862,7 @@ GameObject:
   - component: {fileID: 867412795}
   - component: {fileID: 867412799}
   - component: {fileID: 867412800}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1048,7 +1048,7 @@ GameObject:
   m_Component:
   - component: {fileID: 964620203}
   - component: {fileID: 964620204}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FireAbility3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1130,7 +1130,7 @@ GameObject:
   - component: {fileID: 1632511466}
   - component: {fileID: 1632511469}
   - component: {fileID: 1632511470}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}

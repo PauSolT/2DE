@@ -27,7 +27,6 @@ public class HealthComponent : MonoBehaviour
             {
                 Die();
             }
-            Debug.Log(currentHealth);
             return healthBeforeDamage - healthAfterDamage;
         }
     }
