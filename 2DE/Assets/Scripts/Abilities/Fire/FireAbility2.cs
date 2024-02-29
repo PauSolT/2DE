@@ -13,7 +13,7 @@ public class FireAbility2 : Ability
         base.Init();
         abilityName = "Fire pool";
         code = ElementCode.Fire;
-        offset = (4f * player.transform.right) + Vector3.down ;
+        offset = (4f * player.transform.right);
         baseCooldown = 20f;
     }
 

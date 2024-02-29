@@ -8,17 +8,25 @@ public class FireAbility2Trigger : MonoBehaviour
     readonly float interval = 0.25f;
     float currentInterval = 0.25f;
 
-    readonly private List<HealthComponent> enemies = new();
+    [SerializeField]
+    public List<HealthComponent> enemies = new();
     private HealthComponent player;
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("ASDISD");
         if (collision.CompareTag("Player"))
         {
-            player = collision.GetComponent<HealthComponent>();
+            if(!player)
+            {
+                player = collision.GetComponent<HealthComponent>();
+            }
         }
         if (collision.CompareTag("Enemy"))
         {
-            enemies.Add(collision.GetComponent<HealthComponent>());
+            if(!enemies.Contains(collision.GetComponent<HealthComponent>()))
+            {
+                enemies.Add(collision.GetComponent<HealthComponent>());
+            }
         }
     }
 
@@ -49,6 +57,7 @@ public class FireAbility2Trigger : MonoBehaviour
             {
                 player.TakeHealing(damagePerSecond * (interval * 2f));
             }
+            currentInterval = interval;
         }
     }
 }
